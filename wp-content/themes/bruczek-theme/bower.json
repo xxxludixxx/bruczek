@@ -1,0 +1,26 @@
+{
+  "name": "bruczek-theme",
+  "description": "bruczek.pl wordpress theme",
+  "main": "index.php",
+  "authors": [
+    "Adam Tumielewicz"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^2.2.0"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "jquery": "^2.2.0"
+  }
+}
