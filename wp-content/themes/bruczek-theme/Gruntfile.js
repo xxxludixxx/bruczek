@@ -10,20 +10,21 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         // watch for changes and trigger compass, jshint, uglify and livereload
-        watch: {
-            css: {
-                files: '**/*.scss',
-                tasks: ['compass']
-            }
-        },
-
-        // compass and scss
-        compass: {
+        pkg: grunt.file.readJSON('package.json'),
+        sass: {
             dist: {
                 options: {
-                    config: 'config.rb',
-                    force: true
+                    style: 'expanded',
+                },
+                files: {
+                    'style.css': 'assets/stylesheets/scss/main.scss',
                 }
+            }
+        },
+        watch: {
+            css: {
+                files: 'assets/stylesheets/scss/*.scss',
+                tasks: ['concat', 'sass']
             }
         },
 
@@ -39,8 +40,14 @@ module.exports = function(grunt) {
             ]
         },
 
+        concat: {
+            dist: {
+                src: ['assets/stylesheets/scss/bootstrap-overrides.scss', 'assets/stylesheets/scss/styles.scss'],
+                dest: 'assets/stylesheets/scss/build/main.scss'
+            }
+        },
+
         // uglify to concat, minify, and make source maps
-        pkg: grunt.file.readJSON('package.json'),
         uglify: {
             dist: {
                 options: {
@@ -138,6 +145,6 @@ module.exports = function(grunt) {
     grunt.renameTask('rsync', 'deploy');
 
     // register task
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['concat', 'watch', 'sass']);
 
 };
