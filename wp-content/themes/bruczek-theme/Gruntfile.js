@@ -43,7 +43,7 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: ['assets/stylesheets/scss/bootstrap-overrides.scss', 'assets/stylesheets/scss/styles.scss'],
-                dest: 'assets/stylesheets/scss/build/main.scss'
+                dest: 'assets/stylesheets/scss/main.scss'
             }
         },
 

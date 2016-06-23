@@ -7337,5 +7337,8 @@ button.close {
     display: none !important;
   }
 }
+.container-fluid {
+  padding: 0;
+}
 
 /*# sourceMappingURL=style.css.map */

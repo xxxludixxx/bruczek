@@ -17,7 +17,7 @@
 </head>
 <body <?php body_class(); ?>>
     <header id="main-header" class="site-header" role="banner">
-        <div class="container">
+        <div class="container-fluid">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
                 <?php bruczek_theme_the_custom_logo(); ?>
             </a>
@@ -25,7 +25,6 @@
             <div class="header-phone-number"><p>123 123 3123</p></div>
             <div class="social-icons"></div>
             <nav id="site-navigation" class="main-navigation" role="navigation">
-                <button class="menu-toggle"><?php _e( 'Primary Menu', '_mbbasetheme' ); ?></button>
                 <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
             </nav><!-- #site-navigation -->
         </div>
