@@ -11,19 +11,9 @@ module.exports = function(grunt) {
 
         // watch for changes and trigger compass, jshint, uglify and livereload
         watch: {
-            options: {
-                livereload: true,
-            },
-            compass: {
-                files: ['bower_components/bootstrap-sass/assets/scss/**/*.{scss,sass}'],
+            css: {
+                files: '**/*.scss',
                 tasks: ['compass']
-            },
-            js: {
-                files: '<%= jshint.all %>',
-                tasks: ['jshint', 'uglify']
-            },
-            livereload: {
-                files: ['*.html', '*.php', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
             }
         },
 
