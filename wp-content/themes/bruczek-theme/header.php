@@ -18,14 +18,21 @@
 <body <?php body_class(); ?>>
     <header id="main-header" class="site-header" role="banner">
         <div class="container-fluid">
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php bruczek_theme_the_custom_logo(); ?>
-            </a>
-            <div><p><?php bloginfo('name'); ?></p></div>
-            <div class="header-phone-number"><p>123 123 3123</p></div>
-            <div class="social-icons"></div>
-            <nav id="site-navigation" class="main-navigation" role="navigation">
+            <div clsas="">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <?php bruczek_theme_the_custom_logo(); ?>
+                </a>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-8 social-icons">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-8 header header-phone-number"><p>+48 74 265 2525</p></div>
+            </div>
+            <div class="row">
                 <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-            </nav><!-- #site-navigation -->
+            </div>
+
         </div>
     </header>

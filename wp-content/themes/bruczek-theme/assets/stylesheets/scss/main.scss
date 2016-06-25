@@ -1,5 +1,8 @@
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
-.container-fluid{
-  padding:0;
+@import "partials/header";
+
+a:focus{
+  outline: 0px auto -webkit-focus-ring-color;
 }

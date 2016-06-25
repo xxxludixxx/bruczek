@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         },
         watch: {
             css: {
-                files: 'assets/stylesheets/scss/*.scss',
+                files: 'assets/stylesheets/scss/**/*.scss',
                 tasks: ['concat', 'sass']
             }
         },
