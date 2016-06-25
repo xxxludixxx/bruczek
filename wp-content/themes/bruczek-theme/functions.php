@@ -1,5 +1,6 @@
 <?php
 function bower_enqueue_assets() {
+    
     // bower:css
     // endbower
     wp_enqueue_style('main-styles', get_template_directory_uri(). '/style.css');
@@ -16,7 +17,7 @@ add_theme_support( 'custom-logo', array(
     'flex-height' => true,
 ) );
 
-
+add_theme_support( 'post-thumbnails');
 
 require get_template_directory() . '/inc/custom-header.php';
 

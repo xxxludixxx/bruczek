@@ -5,3 +5,6 @@
  * Date: 25.06.16
  * Time: 12:06
  */
+?>
+<?php wp_footer(); ?>
+</body
